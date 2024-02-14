@@ -1,0 +1,21 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Bebas-Regular.ttf",
+      "sha1": "b2c1f38ef8e1956cab074cb99d497af9921b92da"
+    },
+    {
+      "path": "assets/fonts/BebasNeue-Regular.ttf",
+      "sha1": "ac310d4271fb1ed5012f6d512b0e7e061bcefdd2"
+    },
+    {
+      "path": "assets/fonts/THE BOLD FONT - FREE VERSION - 2023.ttf",
+      "sha1": "eb60b389903988fa1ff8d084d5fc822e021569e1"
+    },
+    {
+      "path": "assets/fonts/ThisAppealFreeDemo-4n38W.otf",
+      "sha1": "8dde68ca9bfa3224d26b469822e09b531ed18958"
+    }
+  ]
+}
