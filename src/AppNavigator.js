@@ -8,6 +8,9 @@ import PrivacyPolicy from './screens/PrivacyPolicy';
 import TermsConditions from './screens/TermsConditions';
 import { colors } from './Constant';
 import ForgotPassword from './screens/ForgotPassword';
+import ForgotPassword1 from './screens/ForgotPassword1';
+import ForgotPassword2 from './screens/ForgotPassword2';
+import ForgotPassword3 from './screens/ForgotPassword3';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +29,9 @@ const AppNavigator = () => {
                 fontSize:26,fontWeight:'600',lineHeight:35.41,position:'relative',left:5
             }}} />
             <Stack.Screen name='ForgotPassword' component={ForgotPassword} options={{headerShown:false}} />
+            <Stack.Screen name='ForgotPassword1' component={ForgotPassword1} options={{headerShown:false}} />
+            <Stack.Screen name='ForgotPassword2' component={ForgotPassword2} options={{headerShown:false}} />
+            <Stack.Screen name='ForgotPassword3' component={ForgotPassword3} options={{headerShown:false}} />
         </Stack.Navigator>
     </NavigationContainer>
   )
