@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { colors } from '../Constant';
 
 const ForgotPassword = ({ navigation }) => {
@@ -13,7 +13,7 @@ const ForgotPassword = ({ navigation }) => {
         navigation.navigate('ForgotPassword1');
       } else {
         // Handle invalid email case (e.g., show an error message)
-        console.error('Invalid email');
+        Alert.alert('Enter Valid Email');
       }
     };
 

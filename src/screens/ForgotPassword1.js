@@ -7,7 +7,6 @@ import { Svg, Circle, Path } from 'react-native-svg'
 
 const ForgotPassword1 = ({navigation}) => {
     const handleContinue = () => {
-        // Navigate to NewPasswordScreen
         navigation.navigate('ForgotPassword2');
       };
 

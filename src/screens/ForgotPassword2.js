@@ -7,7 +7,7 @@ const ForgotPassword2 = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const handleContinue = () => {
-    navigation.navigate('Signin')
+    navigation.navigate('ForgotPassword3')
   }
   const isContinueButtonDisabled = !password || password !== confirmPassword;
 

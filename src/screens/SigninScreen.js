@@ -1,9 +1,20 @@
-import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { colors } from '../Constant';
 import Buttons from '../components/Buttons';
 
 const SignInScreen = ({navigation}) => {
+    const [email, setEmail] = useState('');
+   // console.log(email);
+    const [password, setPassword] = useState('');
+   // console.log(password);
+   const submit = () => {
+    if (email === 'abc@test.com' && password === '12345') {
+        navigation.navigate('WelcomeScreen');
+    } else {
+        Alert.alert('User Name Or Password Is Not Correct')
+    }
+   }
     const goToPrivacyPolicy = () => {
         // Navigate to Privacy Policy screen
         navigation.navigate('Privacy Policy');
@@ -29,6 +40,8 @@ const SignInScreen = ({navigation}) => {
                 placeholderTextColor={'#808080'}
                 keyboardType="email-address"
                 autoCapitalize="none"
+                value={email}
+                onChangeText={(emailaddress)=> setEmail(emailaddress)}
             />
 
             {/* Password Input */}
@@ -38,7 +51,10 @@ const SignInScreen = ({navigation}) => {
                 style={styles.input}
                 placeholder="Password"
                 placeholderTextColor={'#808080'}
-                secureTextEntry
+                secureTextEntry= {true}
+                value={password}
+                onChangeText={(Passworddata)=> setPassword (Passworddata)}
+
             />
 
             {/* Forgot Password Button */}
@@ -46,11 +62,9 @@ const SignInScreen = ({navigation}) => {
                 <Text style={styles.forgotPasswordText} onPress={()=> navigation.navigate('ForgotPassword')}>Forgot Password?</Text>
             </TouchableOpacity>
 
-
-
-
             {/* Sign In Button */}
-            <TouchableOpacity style={styles.signInButton}>
+            <TouchableOpacity style={styles.signInButton} 
+            onPress={()=> submit()}>
                 <Text style={styles.signInButtonText}>Sign In</Text>
             </TouchableOpacity>
 
