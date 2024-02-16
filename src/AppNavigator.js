@@ -12,6 +12,10 @@ import ForgotPassword1 from './screens/ForgotPassword1';
 import ForgotPassword2 from './screens/ForgotPassword2';
 import ForgotPassword3 from './screens/ForgotPassword3';
 import WelcomeScreen from './screens/WelcomeScreen';
+import HomeScreen from './screens/HomeScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import NameScreen from './screens/NameScreen';
+import EditNameBtn from './components/EditNameBtn';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +38,10 @@ const AppNavigator = () => {
             <Stack.Screen name='ForgotPassword2' component={ForgotPassword2} options={{headerShown:false}} />
             <Stack.Screen name='ForgotPassword3' component={ForgotPassword3} options={{headerShown:false}} />
             <Stack.Screen name='WelcomeScreen' component={WelcomeScreen} options={{headerShown:false}} />
+            <Stack.Screen name='HomeScreen' component={HomeScreen} options={{headerShown:false}} />
+            <Stack.Screen name='Settings' component={SettingsScreen} options={{headerShown:false,}} />
+            <Stack.Screen name='NameScreen' component={NameScreen} options={{headerShown:false,}} />
+
         </Stack.Navigator>
     </NavigationContainer>
   )
