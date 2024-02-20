@@ -16,6 +16,9 @@ import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import NameScreen from './screens/NameScreen';
 import EditNameBtn from './components/EditNameBtn';
+import PictureScreen from './screens/PictureScreen';
+import YourMessages from './screens/YourMessages';
+import AddMessages from './screens/AddMessages';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +44,9 @@ const AppNavigator = () => {
             <Stack.Screen name='HomeScreen' component={HomeScreen} options={{headerShown:false}} />
             <Stack.Screen name='Settings' component={SettingsScreen} options={{headerShown:false,}} />
             <Stack.Screen name='NameScreen' component={NameScreen} options={{headerShown:false,}} />
+            <Stack.Screen name='PictureScreen' component={PictureScreen} options={{headerShown:false,}} />
+            <Stack.Screen name='YourMessage' component={YourMessages} options={{headerShown:false,}} />
+            <Stack.Screen name='AddMessage' component={AddMessages} options={{headerShown:false,}} />
 
         </Stack.Navigator>
     </NavigationContainer>

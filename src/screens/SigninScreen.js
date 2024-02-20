@@ -80,9 +80,6 @@ const SignInScreen = ({navigation}) => {
                 </TouchableOpacity>
             </Text>
 
-
-
-
         </View>
     );
 };

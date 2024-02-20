@@ -2,14 +2,26 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { colors } from '../Constant';
 import EditNameBtn from '../components/EditNameBtn';
+import { useNavigation } from '@react-navigation/native';
 
-const SettingsScreen = ({ navigation }) => {
+const SettingsScreen = ( ) => {
+    const navigation =useNavigation();
     const handleBack = () => {
         navigation.navigate('HomeScreen');
     };
     const handleEditName = () => {
         navigation.navigate('NameScreen');
     };
+    const handlePicture = () => {
+        navigation.navigate('PictureScreen')
+    };
+    const handleYourMessage = () => {
+        navigation.navigate('YourMessage')
+    };
+    const handleAddMessage = () => {
+        navigation.navigate('AddMessage')
+    };
+
     return (
         <View style={styles.container}>
             <View style={{ flexDirection: 'row', marginTop: 20 }}>
@@ -26,7 +38,7 @@ const SettingsScreen = ({ navigation }) => {
                 </TouchableOpacity>
             </View>
             <View style={{marginBottom: 15, }}>
-                <TouchableOpacity style={styles.Button} onPress={handleEditName}>
+                <TouchableOpacity style={styles.Button} onPress={handlePicture}>
                     <Text style={styles.text}>
                         Change Picture
                     </Text>
@@ -34,14 +46,14 @@ const SettingsScreen = ({ navigation }) => {
             </View>
             <View style={{marginBottom: 15, }}>
                 <TouchableOpacity style={styles.Button} onPress={handleEditName}>
-                    <Text style={styles.text}>
+                    <Text style={styles.text} onPress={handleYourMessage}>
                         Your Message
                     </Text>
                 </TouchableOpacity>
             </View>
             <View style={{marginBottom: 15, }}>
                 <TouchableOpacity style={styles.Button} onPress={handleEditName}>
-                    <Text style={styles.text}>
+                    <Text style={styles.text} onPress={handleAddMessage}>
                         Add Own Message
                     </Text>
                 </TouchableOpacity>

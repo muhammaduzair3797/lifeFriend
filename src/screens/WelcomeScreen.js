@@ -6,6 +6,8 @@ import { colors } from '../Constant';
 
 const WelcomeScreen = ({navigation}) => {
     const [imagePath, setImagePath] = useState('');
+    const [userName, setUserName] = useState('Lisa');
+
     // const pickImage = async () => {
     // {    try{
     //      const image = await ImagePicker.openPicker({
@@ -43,7 +45,7 @@ const WelcomeScreen = ({navigation}) => {
                 }
             </TouchableOpacity>
             <View style={{ flexDirection: 'row' }}>
-                <Text style={{ color: colors.COLOR_LIGHT, fontSize: 24, fontWeight: '600', marginRight: 50 }}> Lisa </Text>
+                <Text style={{ color: colors.COLOR_LIGHT, fontSize: 24, fontWeight: '600', marginRight: 50 }}> {userName} </Text>
                 <Text style={{ color: colors.COLOR_LIGHT, fontSize: 24 }}> 4835 </Text>
             </View>
             <View>
