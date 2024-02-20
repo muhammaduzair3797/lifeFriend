@@ -96,7 +96,8 @@ const YourMessages = ({ route }) => {
                                     </TouchableOpacity>
                                     {isDeleteButtonEnabled && (
                                         <TouchableOpacity onPress={deleteMessage} style={styles.deletebtn}>
-                                            <Text style={styles.deletebtntxt}>Delete</Text>
+                                            <Image source={require('../assets/images/delete.png')} style={{position:'relative',left:105,top:3}}/>
+                                            <Text style={styles.deletebtntxt}>Delete</Text>                                          
                                         </TouchableOpacity>
                                     )}
                                     <View style={{width:327}}>
@@ -219,12 +220,17 @@ const styles = StyleSheet.create({
         borderRadius: 24,
         position: 'absolute',
         top: 540,
+        flexDirection:'row',
+        color:'red',
+        alignSelf:'center'
     },
     deletebtntxt: {
         color: colors.COLOR_LIGHT,
         textAlign: 'center',
-        fontSize: 18
-
+        fontSize: 18,
+        color:'#DD3B3B',
+        position:'relative',
+        left:110
     }
 
 });
